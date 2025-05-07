@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mission Control HQ</title>
+  <style>
+    body {
+      background-color: #0d0d0d;
+      color: #00ff99;
+      font-family: 'Courier New', Courier, monospace;
+      margin: 0;
+      padding: 0;
+    }
+    header, footer {
+      background-color: #1a1a1a;
+      padding: 1em;
+      text-align: center;
+      border-bottom: 2px dashed #00ff99;
+    }
+    footer {
+      border-top: 2px dashed #00ff99;
+      border-bottom: none;
+      margin-top: 2em;
+    }
+    h1, h2, h3 {
+      color: #33ffcc;
+    }
+    ul {
+      list-style-type: square;
+    }
+    nav ul {
+      list-style-type: none;
+      padding: 0;
+    }
+    nav ul li {
+      margin: 0.5em 0;
+    }
+    nav a {
+      color: #00ff99;
+      text-decoration: none;
+    }
+    nav a:hover {
+      text-decoration: underline;
+    }
+    button {
+      background-color: #333;
+      border: 1px solid #00ff99;
+      color: #00ff99;
+      padding: 0.5em 1em;
+      cursor: pointer;
+      font-family: inherit;
+    }
+    button:hover {
+      background-color: #00ff99;
+      color: #0d0d0d;
+    }
+    section {
+      padding: 1em 2em;
+    }
+    .mascot {
+      font-size: 0.85em;
+      margin-top: 1em;
+      color: #33ffcc;
+    }
+  </style>
+  <script>
+    function toggleArchive() {
+      const archive = document.getElementById('mission-archive');
+      archive.style.display = archive.style.display === 'none' ? 'block' : 'none';
+    }
+  </script>
+</head>
+<body>
+
+  <header>
+    <h1><em>DDR_datorika</em></h1>
+    <h2>🪖 Mission Control HQ</h2>
+    <p>Welcome, Commander. The HTML Multiverse awaits your command.</p>
+  </header>
+
+  <section id="briefing">
+    <h2>📡 Current Operation: Mission 1 - Establish Your Base</h2>
+    <p>Your cadets must construct their first HTML pages using Subquests Alpha through Echo.</p>
+    <ul>
+      <li><strong>Alpha:</strong> Create mission folder and index.html</li>
+      <li><strong>Bravo:</strong> Add title tag</li>
+      <li><strong>Charlie:</strong> Create &lt;h1&gt; heading</li>
+      <li><strong>Delta:</strong> Write a universe intro paragraph</li>
+      <li><strong>Echo:</strong> Add at least one hyperlink</li>
+      <li><strong>Foxtrot (optional):</strong> Use AI to enhance your universe</li>
+    </ul>
+  </section>
+
+  <section id="navigation">
+    <h2>🧭 Navigate the Mission</h2>
+    <nav>
+      <ul>
+        <li><a href="check-in.html">✅ Check-In Progress</a></li>
+        <li><a href="badges.html">🎖️ View Cadet Honors</a></li>
+      </ul>
+    </nav>
+  </section>
+
+  <section id="archive">
+    <button onclick="toggleArchive()">📁 Toggle Mission Archive</button>
+    <div id="mission-archive" style="display:none; margin-top: 1em;">
+      <h3>🗂️ Mission Archive</h3>
+      <p><strong>Mission 1 - Establish Your Base</strong><br/>
+      Objective: Build your initial universe HTML page with title, heading, paragraph, and a hyperlink. Use AI assistance if desired.</p>
+    </div>
+  </section>
+
+  <footer>
+    <div class="mascot">
+      <pre>
+  __________________________
+ /                          \
+|  End of Command Briefing  |
+ \__________________________/
+     [°•°]
+    <|==|>
+     /   \
+    ByteBot-7 reporting for mission duty!
+    "Syntax secured, Commander!"
+      </pre>
+    </div>
+    <p>Operated by Command Unit: Lt. CodeStrike & Commander [Insert Name]</p>
+  </footer>
+</body>
+</html>

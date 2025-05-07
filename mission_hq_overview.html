@@ -1,0 +1,111 @@
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <base target="_top">
+    <style>
+      body {
+        font-family: 'Courier New', monospace;
+        background-color: #0a0f1e;
+        color: #00ff99;
+        padding: 40px;
+        text-align: center;
+      }
+      h1 {
+        font-size: 2em;
+        font-style: italic;
+        color: #00ffd5;
+      }
+      table {
+        width: 100%;
+        border-collapse: collapse;
+        margin-top: 20px;
+      }
+      th, td {
+        border: 1px solid #00ff99;
+        padding: 8px;
+        text-align: center;
+      }
+      th {
+        background-color: #1f2937;
+        color: #00ffd5;
+      }
+      tr:nth-child(even) {
+        background-color: #111827;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>🛰️ DDR Mission HQ Overview</h1>
+        <!-- Class selection dropdown -->
+        <label for="classSelect">Select Class:</label>
+        <select id="classSelect">
+          <option value="all">All Classes</option>
+          <option value="7A">7A</option>
+          <option value="8A">8A</option>
+          <option value="8B">8B</option>
+        </select>
+        <br><br>
+    <div id="overview-table">
+      <table>
+        <thead>
+          <tr>
+            <th>Cadet</th>
+            <th>Buddy</th>
+            <th>Class</th>
+            <th>Mission</th>
+            <th>Alpha</th>
+            <th>Bravo</th>
+            <th>Charlie</th>
+            <th>Delta</th>
+            <th>Echo</th>
+            <th>Foxtrot</th>
+            <th>Comments</th>
+          </tr>
+        </thead>
+        <tbody id="data-body">
+          <!-- Data will be injected here by script -->
+        </tbody>
+      </table>
+    </div>
+
+    <script>
+      // Update with your actual Google Apps Script Web App URL + query
+      fetch('https://script.google.com/macros/s/AKfycby2KeFupeoToWivbdtQfkvP99Hk1P3DDPhXyFJmQBFjqAM7Smb2_da97ekgEqSqYaEn/exec?data=true')
+      .then(response => response.json())
+        .then(data => {
+          const tbody = document.getElementById('data-body');
+          const classSelect = document.getElementById('classSelect');
+          
+          // Add event listener to dropdown
+          classSelect.addEventListener('change', function() {
+            filterData(classSelect.value, data);
+          });
+          
+          // Initially display all data
+          filterData('all', data);
+
+          function filterData(selectedClass, data) {
+            tbody.innerHTML = ''; // Clear the current table data
+            
+            data.forEach(row => {
+              // Check if the class matches the selected class (or if 'all' is selected)
+              if (selectedClass === 'all' || row[2] === selectedClass) {
+                const tr = document.createElement('tr');
+                row.forEach(cell => {
+                  const td = document.createElement('td');
+                  td.textContent = cell;
+                  tr.appendChild(td);
+                });
+                tbody.appendChild(tr);
+              }
+            });
+          }
+        })
+        .catch(error => {
+          document.getElementById('overview-table').innerHTML = '<p>Error loading data.</p>';
+          console.error('Error fetching mission data:', error);
+        });
+    </script>
+  </body>
+</html>
