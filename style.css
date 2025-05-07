@@ -1,0 +1,101 @@
+/* General Layout */
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #111;
+  color: #e0e0e0;
+  font-family: 'Courier New', Courier, monospace;
+  line-height: 1.6;
+}
+
+.container {
+  max-width: 800px;
+  margin: 40px auto;
+  padding: 20px;
+  background-color: #1c1c1c;
+  border: 2px solid #3f3f3f;
+  border-radius: 12px;
+  box-shadow: 0 0 15px #0ff4c6;
+}
+
+/* Headings */
+h1, h2 {
+  color: #00ffc3;
+  border-bottom: 2px solid #00ffc3;
+  padding-bottom: 8px;
+}
+
+h3 {
+  color: #a0f0ff;
+  margin-top: 30px;
+}
+
+/* Links */
+a {
+  color: #00ffc3;
+  text-decoration: none;
+}
+
+a:hover {
+  color: #fffd92;
+  text-decoration: underline;
+}
+
+/* Button Style */
+button, .button-link {
+  display: inline-block;
+  background-color: #00ffc3;
+  color: #111;
+  padding: 10px 20px;
+  margin-top: 12px;
+  font-weight: bold;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+}
+
+button:hover, .button-link:hover {
+  background-color: #00cc9a;
+}
+
+/* Quest Log Box */
+.quest-log {
+  background-color: #222;
+  border: 2px dashed #00ffc3;
+  padding: 20px;
+  border-radius: 10px;
+  margin-bottom: 20px;
+}
+
+/* Urgent Section */
+.urgent {
+  background-color: #3b0f0f;
+  border: 2px solid #ff5e5e;
+  color: #ffaaaa;
+  padding: 16px;
+  border-radius: 10px;
+}
+
+.urgent h2 {
+  color: #ff5e5e;
+}
+
+/* Mission Archive List */
+ul {
+  list-style: square;
+  padding-left: 20px;
+}
+
+li {
+  margin-bottom: 10px;
+}
+
+/* Footer / Return Link */
+footer {
+  margin-top: 40px;
+  text-align: center;
+  color: #666;
+  font-size: 0.9em;
+}
