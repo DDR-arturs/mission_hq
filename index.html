@@ -1,131 +1,72 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Mission Control HQ</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mission HQ</title>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500&display=swap" rel="stylesheet">
   <style>
     body {
-      background-color: #0d0d0d;
-      color: #00ff99;
-      font-family: 'Courier New', Courier, monospace;
+      background-color: #0d1117;
+      color: #c9d1d9;
+      font-family: 'Orbitron', sans-serif;
       margin: 0;
-      padding: 0;
+      padding: 2rem;
     }
-    header, footer {
-      background-color: #1a1a1a;
-      padding: 1em;
-      text-align: center;
-      border-bottom: 2px dashed #00ff99;
+    h1, h2 {
+      color: #58a6ff;
     }
-    footer {
-      border-top: 2px dashed #00ff99;
-      border-bottom: none;
-      margin-top: 2em;
+    .section {
+      background: #161b22;
+      border: 2px solid #30363d;
+      border-radius: 12px;
+      padding: 1.5rem;
+      margin-bottom: 2rem;
+      box-shadow: 0 0 12px #0ea5e9;
     }
-    h1, h2, h3 {
-      color: #33ffcc;
-    }
-    ul {
-      list-style-type: square;
-    }
-    nav ul {
-      list-style-type: none;
-      padding: 0;
-    }
-    nav ul li {
-      margin: 0.5em 0;
-    }
-    nav a {
-      color: #00ff99;
+    .btn {
+      display: inline-block;
+      background-color: #238636;
+      color: white;
+      padding: 0.75rem 1.5rem;
+      border: none;
+      border-radius: 8px;
       text-decoration: none;
+      font-size: 1rem;
+      margin-top: 1rem;
+      box-shadow: 0 0 8px #238636;
     }
-    nav a:hover {
-      text-decoration: underline;
-    }
-    button {
-      background-color: #333;
-      border: 1px solid #00ff99;
-      color: #00ff99;
-      padding: 0.5em 1em;
-      cursor: pointer;
-      font-family: inherit;
-    }
-    button:hover {
-      background-color: #00ff99;
-      color: #0d0d0d;
-    }
-    section {
-      padding: 1em 2em;
-    }
-    .mascot {
-      font-size: 0.85em;
-      margin-top: 1em;
-      color: #33ffcc;
+    .btn:hover {
+      background-color: #2ea043;
     }
   </style>
-  <script>
-    function toggleArchive() {
-      const archive = document.getElementById('mission-archive');
-      archive.style.display = archive.style.display === 'none' ? 'block' : 'none';
-    }
-  </script>
 </head>
 <body>
+  <h1>🎖️ Cadet Mission HQ</h1>
 
-  <header>
-    <h1><em>DDR_datorika</em></h1>
-    <h2>🪖 Mission Control HQ</h2>
-    <p>Welcome, Commander. The HTML Multiverse awaits your command.</p>
-  </header>
+  <div class="section">
+    <h2>📘 Current Mission Briefing: Mission 3</h2>
+    <p>Your mission is to level up your HTML universe with STYLE! Use <code>&lt;style&gt;</code>, CSS files, and HTML tags to enhance your digital realm. Show your creativity with color, layout, and typography!</p>
+    <a class="btn" href="missions/Mission_3_Briefing.docx" target="_blank">📄 View Full Mission Briefing</a>
+  </div>
 
-  <section id="briefing">
-    <h2>📡 Current Operation: Mission 1 - Establish Your Base</h2>
-    <p>Your cadets must construct their first HTML pages using Subquests Alpha through Echo.</p>
-    <ul>
-      <li><strong>Alpha:</strong> Create mission folder and index.html</li>
-      <li><strong>Bravo:</strong> Add title tag</li>
-      <li><strong>Charlie:</strong> Create &lt;h1&gt; heading</li>
-      <li><strong>Delta:</strong> Write a universe intro paragraph</li>
-      <li><strong>Echo:</strong> Add at least one hyperlink</li>
-      <li><strong>Foxtrot (optional):</strong> Use AI to enhance your universe</li>
-    </ul>
-  </section>
+  <div class="section">
+    <h2>🚨 Urgent Quest: Report Your Progress</h2>
+    <p>Report your work on every mission you've completed. Your report must be checked and signed off by a <strong>buddy reviewer</strong>. Double-check spelling, tag usage, and completion of all subquests.</p>
+    <a class="btn" href="https://script.google.com/macros/s/AKfycby2KeFupeoToWivbdtQfkvP99Hk1P3DDPhXyFJmQBFjqAM7Smb2_da97ekgEqSqYaEn/exec" target="_blank">🛰️ Report Your Mission Progress</a>
+  </div>
 
-  <section id="navigation">
-    <h2>🧭 Navigate the Mission</h2>
-    <nav>
-      <ul>
-        <li><a href="check-in.html">✅ Check-In Progress</a></li>
-        <li><a href="badges.html">🎖️ View Cadet Honors</a></li>
-      </ul>
-    </nav>
-  </section>
+  <div class="section">
+    <h2>📈 Track Your Progress</h2>
+    <p>See what you've completed and what's still pending. Use this to plan your next steps and complete your missions 100%.</p>
+    <a class="btn" href="https://ddr-arturs.github.io/mission_hq/mission_hq_overview.html" target="_blank">📊 View Mission Overview</a>
+  </div>
 
-  <section id="archive">
-    <button onclick="toggleArchive()">📁 Toggle Mission Archive</button>
-    <div id="mission-archive" style="display:none; margin-top: 1em;">
-      <h3>🗂️ Mission Archive</h3>
-      <p><strong>Mission 1 - Establish Your Base</strong><br/>
-      Objective: Build your initial universe HTML page with title, heading, paragraph, and a hyperlink. Use AI assistance if desired.</p>
-    </div>
-  </section>
+  <div class="section">
+    <h2>📚 Mission Archive</h2>
+    <p>Access past mission documents and briefings.</p>
+    <a class="btn" href="missions/" target="_blank">🗂️ Browse Mission Archive</a>
+  </div>
 
-  <footer>
-    <div class="mascot">
-      <pre>
-  __________________________
- /                          \
-|  End of Command Briefing  |
- \__________________________/
-     [°•°]
-    <|==|>
-     /   \
-    ByteBot-7 reporting for mission duty!
-    "Syntax secured, Commander!"
-      </pre>
-    </div>
-    <p>Operated by Command Unit: Lt. CodeStrike & Commander [Insert Name]</p>
-  </footer>
 </body>
 </html>
