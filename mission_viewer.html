@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mission Viewer</title>
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    body {
+      background-color: #0a0a1a;
+      color: #fff;
+      font-family: 'Courier New', Courier, monospace;
+      padding: 2em;
+    }
+    .mission-toggle-buttons {
+      text-align: center;
+      margin-bottom: 1em;
+    }
+    .mission-toggle-buttons button {
+      background-color: #2c2f4a;
+      color: #fff;
+      border: none;
+      margin: 0 5px;
+      padding: 10px 15px;
+      cursor: pointer;
+      border-radius: 8px;
+      font-weight: bold;
+    }
+    .mission-toggle-buttons button:hover {
+      background-color: #4b4f7a;
+    }
+    .mission-entry {
+      background: #111;
+      border: 1px solid #333;
+      padding: 1.5em;
+      margin-top: 1em;
+      border-radius: 10px;
+      display: none;
+    }
+  </style>
+  <script>
+    function showMission(id) {
+      const entries = document.querySelectorAll('.mission-entry');
+      entries.forEach(entry => entry.style.display = 'none');
+      document.getElementById(id).style.display = 'block';
+    }
+    window.onload = () => showMission('m5');
+  </script>
+</head>
+<body>
+  <h1>📖 Mission Briefing Gallery</h1>
+  <div class="mission-toggle-buttons">
+    <button onclick="showMission('m1')">Mission 1</button>
+    <button onclick="showMission('m2')">Mission 2</button>
+    <button onclick="showMission('m3')">Mission 3</button>
+    <button onclick="showMission('m4')">Mission 4</button>
+    <button onclick="showMission('m5')">Mission 5</button>
+  </div>
+
+  <div id="m1" class="mission-entry">
+    <h2>Mission 1: Cadet Awakening</h2>
+    <p>Create your first HTML homepage. Learn the basics of structure, tags, and linking your identity to our digital realm.</p>
+    <p><a href="missions/mission1_briefing.docx" target="_blank">📄 Download Briefing (.docx)</a></p>
+  </div>
+
+  <div id="m2" class="mission-entry">
+    <h2>Mission 2: Construct Your Realm</h2>
+    <p>Develop at least 3 interconnected HTML pages, each a distinct “world” in your multiverse. Use <code>&lt;a&gt;</code>, <code>&lt;img&gt;</code>, and themed content.</p>
+    <p><a href="missions/mission2_briefing.docx" target="_blank">📄 Download Briefing (.docx)</a></p>
+  </div>
+
+  <div id="m3" class="mission-entry">
+    <h2>Mission 3: Code the Core</h2>
+    <p>Establish the foundational style of your realm using CSS. Create visual identity and use classes and IDs for styling control.</p>
+    <p><a href="missions/mission3_briefing.docx" target="_blank">📄 Download Briefing (.docx)</a></p>
+  </div>
+
+  <div id="m4" class="mission-entry">
+    <h2>Mission 4: Code Connection</h2>
+    <p>Victory Path A: Create a custom <code>style.css</code> file for your HTML universe using ChatGPT.</p>
+    <p>Victory Path B: Replace your basic <code>&lt;a&gt;</code> links with custom JavaScript buttons that link between pages.</p>
+  </div>
+
+  <div id="m5" class="mission-entry">
+    <h2>Mission 5: Data Ops Deployment</h2>
+    <p>💾 <strong>Galvenie uzdevumi:</strong></p>
+    <ul>
+      <li>Izveidot lapu ar datnes augšupielādes ievades lauku un attēlot datnes info ar JavaScript</li>
+      <li>Veidot CSV datni ar vismaz 2 kolonnām un 3 rindām</li>
+      <li>Nolasīt CSV ar JavaScript un attēlot saturu kā <code>&lt;table&gt;</code> vai <code>&lt;div&gt;</code></li>
+      <li>Grafiski attēlot datus uz <code>&lt;canvas&gt;</code> elementa izmantojot JavaScript</li>
+    </ul>
+    <p>🤖 <strong>Prompt lietošanai ar ChatGPT:</strong><br>
+      <em>"Tu esi mans datortehnoloģiju skolotājs. Palīdzi man soli pa solim izveidot mājaslapu, kas var augšupielādēt CSV datni, nolasīt to ar JavaScript, parādīt saturu HTML tabulā un uzzīmēt datus uz canvas elementa."</em>
+    </p>
+  </div>
+</body>
+</html>
