@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="lv">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Misiju Skatītājs</title>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <style>
+    body {
+      background-color: #121212;
+      color: #f5f5f5;
+      font-family: 'Orbitron', sans-serif;
+      padding: 20px;
+    }
+    .mission-toggle {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+    .mission-toggle button {
+      background-color: #1e1e1e;
+      border: 1px solid #333;
+      color: #f5f5f5;
+      padding: 10px 20px;
+      margin: 0 10px;
+      border-radius: 8px;
+      cursor: pointer;
+    }
+    .mission-toggle button:hover {
+      background-color: #2a2a2a;
+    }
+    .mission-card {
+      display: none;
+      border: 2px solid #444;
+      border-radius: 12px;
+      padding: 20px;
+      margin: 10px 0;
+      background-color: #1a1a1a;
+      box-shadow: 0 0 10px rgba(0, 255, 255, 0.2);
+    }
+    .mission-card.active {
+      display: block;
+    }
+    .mission-title {
+      font-size: 1.5em;
+      color: #00ffff;
+      margin-bottom: 10px;
+    }
+    .section-label {
+      font-weight: bold;
+      margin-top: 15px;
+      color: #ccc;
+    }
+    .icon-label::before {
+      margin-right: 8px;
+    }
+    .icon-objective::before { content: "🎯"; }
+    .icon-supplies::before { content: "🛡️"; }
+    .icon-deadline::before { content: "🕒"; }
+    .icon-status::before { content: "🔒"; }
+    .icon-doc::before { content: "📄"; }
+  </style>
+</head>
+<body>
+  <h1>🛰️ Misiju Skatītājs</h1>
+  <div class="mission-toggle">
+    <button onclick="showMission(1)">Misija 1</button>
+    <button onclick="showMission(2)">Misija 2</button>
+    <button onclick="showMission(3)">Misija 3</button>
+    <button onclick="showMission(4)">Misija 4</button>
+    <button onclick="showMission(5)">Misija 5</button>
+  </div>
+
+  <div id="mission1" class="mission-card active">
+    <div class="mission-title">Misija 1: Kadeta Atmošanās</div>
+    <div class="section-label icon-objective">Uzdevums</div>
+    <p>Izveido savu pirmo HTML sākumlapu. Apgūsti struktūras, tagu un saišu pamatus.</p>
+    <div class="section-label icon-supplies">Piederumi</div>
+    <p>Dators, teksta redaktors, pārlūks.</p>
+    <div class="section-label icon-deadline">Termiņš</div>
+    <p>30. aprīlis</p>
+    <div class="section-label icon-doc">Faili</div>
+    <p><a href="missions/mission1_briefing.docx" target="_blank">📄 Lejupielādēt Briefingu</a></p>
+  </div>
+
+  <div id="mission2" class="mission-card">
+    <div class="mission-title">Misija 2: Veido savu Pasauli</div>
+    <div class="section-label icon-objective">Uzdevums</div>
+    <p>Izstrādā vismaz 3 savienotas HTML lapas kā daļas no sava multiversa. Izmanto saites, attēlus un tematisku saturu.</p>
+    <div class="section-label icon-supplies">Piederumi</div>
+    <p>HTML redaktors, attēlu faili.</p>
+    <div class="section-label icon-deadline">Termiņš</div>
+    <p>1. maijs</p>
+    <div class="section-label icon-doc">Faili</div>
+    <p><a href="missions/mission2_briefing.docx" target="_blank">📄 Lejupielādēt Briefingu</a></p>
+  </div>
+
+  <div id="mission3" class="mission-card">
+    <div class="mission-title">Misija 3: Koda Kodols</div>
+    <div class="section-label icon-objective">Uzdevums</div>
+    <p>Izveido CSS failu, lai noteiktu sava HTML Visuma vizuālo identitāti.</p>
+    <div class="section-label icon-supplies">Piederumi</div>
+    <p>style.css fails, HTML lapas.</p>
+    <div class="section-label icon-deadline">Termiņš</div>
+    <p>2. maijs</p>
+    <div class="section-label icon-doc">Faili</div>
+    <p><a href="missions/mission3_briefing.docx" target="_blank">📄 Lejupielādēt Briefingu</a></p>
+  </div>
+
+  <div id="mission4" class="mission-card">
+    <div class="mission-title">Misija 4: Uzvara ar Mākslīgo Intelektu</div>
+    <div class="section-label icon-objective">Uzdevums</div>
+    <p>
+      Sasniedz vienu no uzvarām:<br>
+      - Izveido CSS failu, kas saskan ar tava HTML Visuma tēmu.<br>
+      - Aizvieto HTML saites ar JavaScript pogām.
+    </p>
+    <div class="section-label icon-supplies">Piederumi</div>
+    <p>ChatGPT, HTML un JavaScript zināšanas.</p>
+    <div class="section-label icon-deadline">Termiņš</div>
+    <p>6. maijs</p>
+  </div>
+
+  <div id="mission5" class="mission-card">
+    <div class="mission-title">Misija 5: Datu Apgūšana</div>
+    <div class="section-label icon-objective">Uzdevums</div>
+    <ul>
+      <li>Izveidot augšupielādes lauku datnēm HTML formā.</li>
+      <li>Izmantot JavaScript, lai nolasītu datnes nosaukumu un izmēru.</li>
+      <li>Izveidot CSV datni un nolasīt tās datus rindiņās un kolonnās.</li>
+      <li>Grafiski attēlot skaitliskus datus uz <code>&lt;canvas&gt;</code> elementa.</li>
+    </ul>
+    <div class="section-label icon-supplies">Piederumi</div>
+    <p>CSV datne, JavaScript, HTML, <code>&lt;canvas&gt;</code> elements.</p>
+    <div class="section-label icon-deadline">Termiņš</div>
+    <p>14. maijs</p>
+  </div>
+
+  <script>
+    function showMission(num) {
+      const missions = document.querySelectorAll('.mission-card');
+      missions.forEach(card => card.classList.remove('active'));
+      document.getElementById(`mission${num}`).classList.add('active');
+    }
+  </script>
+</body>
+</html>
