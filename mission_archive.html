@@ -1,20 +1,94 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
+  <meta charset="UTF-8">
   <title>Mission Archive</title>
-  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="style.css">
+  <style>
+    .mission-content {
+      display: none;
+      margin-top: 1em;
+      padding: 1em;
+      border-left: 4px solid #0ff;
+      background-color: #111;
+    }
+
+    .mission-button {
+      display: block;
+      margin: 1em 0;
+      padding: 0.6em 1em;
+      background-color: #0a0a2a;
+      border: 2px solid #0ff;
+      color: #0ff;
+      font-weight: bold;
+      cursor: pointer;
+      width: 100%;
+      text-align: left;
+    }
+
+    .mission-button:hover {
+      background-color: #0ff;
+      color: #000;
+    }
+  </style>
 </head>
 <body>
-  <div class="container">
-    <h1>📚 Mission Archive</h1>
-    <p>Select a past mission to review or download:</p>
-    <ul>
-      <li><a href="mission/mission1_briefing.docx" target="_blank">Mission 1: Develop main Index.html page</a></li>
-      <li><a href="mission/mission2_briefing.docx" target="_blank">Mission 2: Construct x3 .html pages</a></li>
-      <li><a href="mission/mission3_briefing.docx" target="_blank">Mission 3: Style.css</a></li>
-    </ul>
-    <a href="index.html">⬅️ Return to HQ</a>
-  </div>
+  <main class="container">
+    <h1>📂 Mission Archive</h1>
+
+  <!-- Mission 1 -->
+<button class="mission-button" onclick="toggleMission('m1')">Mission 1: Cadet Awakening</button>
+<div class="mission-content" id="m1">
+  <p>Create your first HTML homepage. Learn the basics of structure, tags, and linking your identity to our digital realm.</p>
+  <p><a href="mission/mission1_briefing.docx" target="_blank">📄 Download Briefing (.docx)</a></p>
+</div>
+
+<!-- Mission 2 -->
+<button class="mission-button" onclick="toggleMission('m2')">Mission 2: Construct Your Realm</button>
+<div class="mission-content" id="m2">
+  <p>Develop at least 3 interconnected HTML pages, each a distinct “world” in your multiverse. Use <code>&lt;a&gt;</code>, <code>&lt;img&gt;</code>, and themed content.</p>
+  <p><a href="mission/mission2_briefing.docx" target="_blank">📄 Download Briefing (.docx)</a></p>
+</div>
+
+<!-- Mission 3 -->
+<button class="mission-button" onclick="toggleMission('m3')">Mission 3: Code the Core</button>
+<div class="mission-content" id="m3">
+  <p>Establish the foundational style of your realm using CSS. Create visual identity and use classes and IDs for styling control.</p>
+  <p><a href="mission/mission3_briefing.docx" target="_blank">📄 Download Briefing (.docx)</a></p>
+</div>
+
+
+    <!-- Mission 4 -->
+    <button class="mission-button" onclick="toggleMission('m4')">Mission 4: Enhance with Intelligence</button>
+    <div class="mission-content" id="m4">
+      <p><strong>Objective:</strong> Work with your AI assistant (ChatGPT) to either enhance your HTML universe with custom CSS or create smart JavaScript buttons.</p>
+
+      <h3>Victory Option Alpha: Style Overhaul</h3>
+      <ul>
+        <li>Create a <code>style.css</code> file with a fitting theme.</li>
+        <li>Style elements like <code>body</code>, <code>h1</code>, <code>p</code>, and use class names.</li>
+        <li>Link the CSS using <code>&lt;link rel="stylesheet" href="style.css"&gt;</code>.</li>
+      </ul>
+
+      <h3>Victory Option Bravo: Smart Buttons</h3>
+      <ul>
+        <li>Create a <code>script.js</code> with JavaScript-powered buttons.</li>
+        <li>Use DOM methods like <code>addEventListener</code> and <code>window.location.href</code>.</li>
+        <li>Replace <code>&lt;a&gt;</code> links with styled buttons for immersion.</li>
+      </ul>
+
+      <p><strong>Mission Completion:</strong> Choose one path. Buddy must validate your implementation.</p>
+    </div>
+
+    <!-- Add more missions as needed -->
+
+  </main>
+
+  <script>
+    function toggleMission(id) {
+      const content = document.getElementById(id);
+      content.style.display = (content.style.display === 'block') ? 'none' : 'block';
+    }
+  </script>
 </body>
 </html>
