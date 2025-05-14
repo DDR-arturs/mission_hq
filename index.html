@@ -1,37 +1,55 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Mission HQ</title>
-  <link href="style.css" rel="stylesheet">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Mission HQ – Cadet Dashboard</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <h1>🎖️ Cadet Mission HQ</h1>
+  <div class="container">
 
-  <div class="section">
-    <h2>📘 Current Mission Briefing: Mission 3</h2>
-    <p>Your mission is to level up your HTML universe with STYLE! Use <code>&lt;style&gt;</code>, CSS files, and HTML tags to enhance your digital realm. Show your creativity with color, layout, and typography!</p>
-    <a class="btn" href="mission/mission3_briefing.docx" target="_blank">📄 View Full Mission Briefing</a>
+    <h1>🛰️ Mission HQ: Cadet Dashboard</h1>
+
+    <!-- Current Mission Log -->
+    <div class="quest-log">
+      <h2>📘 Current Mission: <span>Mission 3 – Command Your Cosmos</span></h2>
+      <p>
+        Cadet, your mission is to take full control of your universe. Style your HTML worlds with custom CSS, organize your layout, apply colors, and bring identity to your multiverse.
+      </p>
+      <p>
+        You will learn how to use:
+        <strong><code>&lt;link&gt;</code></strong> to import CSS, 
+        <strong>selectors</strong> to target elements,
+        and style <strong>layout</strong>, <strong>fonts</strong>, and <strong>colors</strong>.
+      </p>
+      <a class="button-link" href="missions/mission3_briefing.docx" target="_blank">📎 Full Briefing (DOCX)</a>
+    </div>
+
+    <!-- Urgent Quest Section -->
+    <div class="urgent">
+      <h2>⚠️ Urgent Quest: Submit All Completed Missions</h2>
+      <p>
+        Make sure you have completed and submitted your reports for <strong>all missions</strong> so far. Ask your buddy to review them.
+        Check your progress on the overview page. If any mission shows incomplete, go back and fix the errors.
+      </p>
+      <p>
+        ✅ Use the <strong>Report Page</strong> to submit. Enter your name, mission, and check off what you've done.
+      </p>
+      <a class="button-link" href="https://script.google.com/macros/s/AKfycby2KeFupeoToWivbdtQfkvP99Hk1P3DDPhXyFJmQBFjqAM7Smb2_da97ekgEqSqYaEn/exec" target="_blank">📝 Go to Report Page</a>
+    </div>
+
+    <!-- Navigation Buttons -->
+    <h3>Navigation</h3>
+    <p>
+      <a class="button-link" href="mission_archive.html">📂 Mission Archive</a>
+      <a class="button-link" href="mission_hq_overview.html">📊 Progress Overview</a>
+    </p>
+
+    <footer>
+      🛡️ Cadet Mission Control &mdash; Operated by Lt. CodeStrike & Commander Arturs<br>
+      Version 3.0 - Transmission Stable.
+    </footer>
   </div>
-
-  <div class="section">
-    <h2>🚨 Urgent Quest: Report Your Progress</h2>
-    <p>Report your work on every mission you've completed. Your report must be checked and signed off by a <strong>buddy reviewer</strong>. Double-check spelling, tag usage, and completion of all subquests.</p>
-    <a class="btn" href="https://script.google.com/macros/s/AKfycby2KeFupeoToWivbdtQfkvP99Hk1P3DDPhXyFJmQBFjqAM7Smb2_da97ekgEqSqYaEn/exec" target="_blank">🛰️ Report Your Mission Progress</a>
-  </div>
-
-  <div class="section">
-    <h2>📈 Track Your Progress</h2>
-    <p>See what you've completed and what's still pending. Use this to plan your next steps and complete your missions 100%.</p>
-    <a class="btn" href="https://ddr-arturs.github.io/mission_hq/mission_hq_overview.html" target="_blank">📊 View Mission Overview</a>
-  </div>
-
-  <div class="section">
-    <h2>📚 Mission Archive</h2>
-    <p>Access past mission documents and briefings.</p>
-    <a class="btn" href="https://ddr-arturs.github.io/mission_hq/mission_archive.html" target="_blank">🗂️ Browse Mission Archive</a>
-  </div>
-
 </body>
 </html>
