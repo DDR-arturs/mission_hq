@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="lv">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>HTML Uzdevums – Kadetu Tests</title>
+  <style>
+    body { font-family: sans-serif; padding: 1rem; background: #f9f9f9; }
+    h1, h2 { color: #333; }
+    .question { margin-bottom: 1rem; background: #fff; padding: 1rem; border-radius: 8px; box-shadow: 0 2px 5px rgba(0,0,0,0.1); }
+    .code-input, textarea { width: 100%; min-height: 100px; font-family: monospace; margin-top: 0.5rem; }
+    .result { font-weight: bold; }
+    .button { background: #007BFF; color: white; padding: 0.5rem 1rem; border: none; border-radius: 5px; cursor: pointer; }
+    .button:hover { background: #0056b3; }
+  </style>
+</head>
+<body>
+  <h1>🧪 HTML Kadetu Tests</h1>
+
+  <!-- Part 1 -->
+  <section>
+    <h2>✅ 1. daļā – Teorija</h2>
+
+    <div class="question">
+      <p>1. Kurš HTML tags tiek izmantots virsraksta veidošanai?</p>
+      <label><input type="radio" name="q1" value="a"> &lt;p&gt;</label><br>
+      <label><input type="radio" name="q1" value="b"> &lt;h1&gt;</label><br>
+      <label><input type="radio" name="q1" value="c"> &lt;head&gt;</label><br>
+      <label><input type="radio" name="q1" value="d"> &lt;title&gt;</label>
+      <div class="result" id="result1"></div>
+    </div>
+
+    <div class="question">
+      <p>2. &lt;br&gt; tiek izmantots, lai ievietotu jaunu rindkopu.</p>
+      <label><input type="radio" name="q2" value="true"> Pareizi</label><br>
+      <label><input type="radio" name="q2" value="false"> Nepareizi</label>
+      <div class="result" id="result2"></div>
+    </div>
+
+    <!-- More questions like above can be added -->
+
+    <button class="button" onclick="gradeQuiz()">✅ Pārbaudīt rezultātus</button>
+  </section>
+
+  <!-- Part 2 -->
+  <section>
+    <h2>✍️ 2. daļā – Teksta jautājumi</h2>
+    <div class="question">
+      <label for="text1">5. Nosauc 3 HTML tagus un to funkcijas:</label>
+      <textarea id="text1"></textarea>
+    </div>
+    <div class="question">
+      <label for="text2">6. Atšķirība starp &lt;head&gt; un &lt;body&gt;:</label>
+      <textarea id="text2"></textarea>
+    </div>
+  </section>
+
+  <!-- Part 3 -->
+  <section>
+    <h2>💻 3. daļā – Praktiskie koda uzdevumi</h2>
+    <div class="question">
+      <label for="code1">8. Uzraksti HTML vizītkarti:</label>
+      <textarea class="code-input" id="code1"></textarea>
+    </div>
+    <div class="question">
+      <label for="code2">9. HTML lapa ar saitēm:</label>
+      <textarea class="code-input" id="code2"></textarea>
+    </div>
+  </section>
+
+  <section>
+    <h2>📤 Nosūtīt atbildes</h2>
+    <p>Lai nosūtītu savas atbildes, atver <a href="YOUR_GOOGLE_FORM_URL_HERE" target="_blank">kadetu atbilžu veidlapu</a>.</p>
+    <p>Nokopē un ielīmē savas teksta un koda atbildes tur.</p>
+  </section>
+
+  <script>
+    function gradeQuiz() {
+      const q1 = document.querySelector('input[name="q1"]:checked');
+      const q2 = document.querySelector('input[name="q2"]:checked');
+
+      let score = 0;
+
+      if (q1 && q1.value === "b") {
+        document.getElementById("result1").textContent = "✔️ Pareizi!";
+        score++;
+      } else {
+        document.getElementById("result1").textContent = "❌ Nepareizi";
+      }
+
+      if (q2 && q2.value === "false") {
+        document.getElementById("result2").textContent = "✔️ Pareizi!";
+        score++;
+      } else {
+        document.getElementById("result2").textContent = "❌ Nepareizi";
+      }
+
+      alert("Tu ieguvi " + score + "/2 punktus par teoriju!");
+    }
+  </script>
+</body>
+</html>
