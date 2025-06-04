@@ -1,80 +1,62 @@
 <!DOCTYPE html>
 <html lang="lv">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>HTML_akadēmija — Skolēna skats</title>
-  <link rel="stylesheet" href="style.css" />
-  <style>
-    body { font-family: sans-serif; margin: 2rem; background: #f5f7fa; }
-    .container { max-width: 900px; margin: auto; background: #fff; padding: 2rem; border-radius: 10px; box-shadow: 0 0 10px rgba(0,0,0,0.05); }
-    h1, h2 { color: #333; }
-    .mission-title { margin-top: 0; color: #0077cc; }
-    .student-info { margin-bottom: 2rem; }
-    .lesson-block { margin-bottom: 1.5rem; }
-    .progress-bar { background: #e0e0e0; border-radius: 5px; overflow: hidden; height: 20px; margin-top: 5px; }
-    .progress { height: 100%; background: #4caf50; }
-    .active { background: #ffecb3; padding: 1rem; border-left: 4px solid #ff9800; }
-    .task-list { margin-top: 1rem; }
-    .task-list li { list-style: none; padding-left: 1em; position: relative; margin-bottom: 5px; }
-    .task-list li::before {
-      content: "✅";
-      position: absolute;
-      left: 0;
-      color: green;
-    }
-    .task-list li.incomplete::before {
-      content: "⬜";
-      color: gray;
-    }
-    .view-link { display: inline-block; margin-top: 10px; padding: 5px 10px; background: #0077cc; color: white; border-radius: 5px; text-decoration: none; }
-  </style>
+  <meta charset="UTF-8">
+  <title>HTML_akadēmija – Sākumlapa</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
   <div class="container">
-    <div class="student-info">
-      <h1>Sveiks, Raiens Bērziņš!</h1>
-      <p>Klase: <strong>7a</strong></p>
-      <h2 class="mission-title">Tava aktīvā misija: Misija 1 – HTML un CSS pamati</h2>
-    </div>
+    <h1>👨‍🚀 Sveiks, Raiens Bērziņš (7.a klase)</h1>
+    <p>Laipni lūgts atpakaļ uz <strong>HTML_akadēmiju</strong>. Tavs progress līdz šim ir sekojošs:</p>
 
-    <!-- Progress summary -->
-    <div>
-      <h3>Mācībstundas progress</h3>
+    <!-- Progress Overview -->
+    <div class="quest-log">
+      <h2>📘 Pašreizējā lielā misija: 1. Tīmekļa lapu uzbūve un programmēšanas principi</h2>
 
-      <div class="lesson-block">
-        <strong>1. Ievads: Kas ir mājaslapa?</strong>
-        <div class="progress-bar"><div class="progress" style="width: 100%"></div></div>
+      <div class="mission-entry">
+        <h3>1. mācībstunda: Ievads: Kas ir mājaslapa?</h3>
+        <progress value="100" max="100"></progress>
       </div>
 
-      <div class="lesson-block">
-        <strong>2. Populāru vietņu struktūras analīze</strong>
-        <div class="progress-bar"><div class="progress" style="width: 100%"></div></div>
+      <div class="mission-entry">
+        <h3>2. mācībstunda: Populāru vietņu struktūras analīze</h3>
+        <progress value="100" max="100"></progress>
       </div>
 
-      <div class="lesson-block">
-        <strong>3. Developer Tools: kā paskatīties "iekšā"</strong>
-        <div class="progress-bar"><div class="progress" style="width: 100%"></div></div>
+      <div class="mission-entry">
+        <h3>3. mācībstunda: Developer Tools</h3>
+        <progress value="100" max="100"></progress>
       </div>
 
-      <div class="lesson-block">
-        <strong>4. HTML bloki: &lt;div&gt;, &lt;h1&gt;, &lt;p&gt;, &lt;img&gt;</strong>
-        <div class="progress-bar"><div class="progress" style="width: 70%"></div></div>
-      </div>
-
-      <div class="lesson-block active">
-        <strong>5. Praktiska nodarbība: vienkāršas lapas veidošana (1. daļa)</strong>
-        <p><em>Sasniedzamie rezultāti:</em> Regulāri testē izveidotos blokus. (T.9.1.4.2.)</p>
-        <ul class="task-list">
-          <li>Atver VS Code un izveido failu <code>index.html</code></li>
-          <li>Izveido HTML struktūru ar &lt;div&gt;, &lt;h1&gt; un &lt;p&gt;</li>
-          <li>Ievieto attēlu ar &lt;img&gt;</li>
-          <li class="incomplete">Pārliecinies, ka lapa atveras pārlūkā</li>
-          <li class="incomplete">Iesniedz savu failu klasē vai augšupielādē</li>
-        </ul>
-        <a class="view-link" href="#">📎 Atver uzdevumu un piemērus</a>
+      <div class="mission-entry">
+        <h3>4. mācībstunda: HTML bloki: &lt;div&gt;, &lt;h1&gt;, &lt;p&gt;, &lt;img&gt;</h3>
+        <progress value="70" max="100"></progress>
       </div>
     </div>
+
+    <!-- Current Lesson -->
+    <div class="quest-log">
+      <h2>🔍 Aktīvā mācībstunda: 5. Praktiska nodarbība (1. daļa)</h2>
+      <p><strong>Sasniedzamie rezultāti:</strong> Regulāri testē izveidotos blokus. (T.9.1.4.2.)</p>
+
+      <h3>Darbības soļi</h3>
+      <ul>
+        <li>Izveido jaunu HTML failu</li>
+        <li>Pievieno virsrakstu un rindkopu</li>
+        <li>Ievieto attēlu ar <code>&lt;img&gt;</code> tagu</li>
+        <li>Saglabā failu ar nosaukumu <code>praktiska1.html</code></li>
+        <li>Prasi klasesbiedram pārbaudīt un parakstīt</li>
+      </ul>
+
+      <a class="button-link" href="materials/praktiska1_piemers.html" target="_blank">📎 Skatīt piemēru</a>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+      🛡️ HTML_akadēmija &mdash; Vadītāji: Lt. CodeStrike & Komandieris Artūrs<br>
+      Versija 4.0 – Savienojums aktīvs.
+    </footer>
   </div>
 </body>
 </html>
